@@ -1,7 +1,7 @@
 use rand::Rng;
 
 pub fn fill_array(array: &mut [u32]) {
-    let len = array.len();
+    let len: usize = array.len();
     let mut rng = rand::thread_rng();
 
     for i in 0..len {
@@ -20,7 +20,7 @@ fn count_digits(number: u32) -> u32 {
 pub fn max_number_digits(array: &[u32]) -> u32 {
     let mut max: u32 = array[0];
 
-    array.iter().for_each(|num| {
+    array.iter().for_each(|num: &u32| {
         if num > &max {
             max = *num;
         }

@@ -5,12 +5,12 @@ fn radixer(array: &mut Vec<u32>, digit: u32) {
     let mut index: usize = 0;
 
     array.iter().for_each(|num: &u32| {
-        let digit_value = utils::get_digit_at(num, digit);
+        let digit_value: u32 = utils::get_digit_at(num, digit);
         radix_array[digit_value as usize].push(*num);
     });
 
-    radix_array.iter().for_each(|v| {
-        v.iter().for_each(|item| {
+    radix_array.iter().for_each(|v: &Vec<u32>| {
+        v.iter().for_each(|item: &u32| {
             array[index] = *item;
             index += 1;
         });
