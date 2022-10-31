@@ -8,7 +8,7 @@ use criterion::{
 
 fn sort_arr_benchmark(c: &mut Criterion) {
     let mut arr = black_box(
-        [0, 2, 1, 0, 1, 3, 4, 5, 6, 12, 2, 20]
+        vec![0, 2, 1, 0, 1, 3, 4, 5, 6, 12, 2, 20]
     );
 
     c.bench_function(

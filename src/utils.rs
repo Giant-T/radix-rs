@@ -20,11 +20,11 @@ fn count_digits(number: u32) -> u32 {
 pub fn max_number_digits(array: &[u32]) -> u32 {
     let mut max: u32 = array[0];
 
-    for number in array {
-        if number > &max {
-            max = *number; 
+    array.iter().for_each(|num| {
+        if num > &max {
+            max = *num;
         }
-    }
+    });
 
     count_digits(max)
 }
