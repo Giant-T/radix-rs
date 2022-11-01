@@ -3,6 +3,7 @@ use std::time::{Instant, Duration};
 use radix_rs::{sort, utils};
 
 fn main() {
+    //  ↓ Le mot clé mut spécifie qu'une variable peu changé de valeur.
     let mut arr: Vec<u32> = vec![0; 1000000];
     utils::fill_array(&mut arr);
 
